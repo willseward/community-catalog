@@ -61,7 +61,7 @@ services:
     {{- if (contains .Values.VOLUME_DRIVER "/")}}
       - ${VOLUME_DRIVER}:/data
     {{- else}}
-      - backup-data:/backup
+      - backup-data:/data
     {{- end}}
 
 {{- if not (contains .Values.VOLUME_DRIVER "/")}}
